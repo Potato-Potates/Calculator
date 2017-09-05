@@ -67,7 +67,11 @@ const btnLabels = [
         cssClass: 'col-3'
     }
 ];
-const buttons = btnLabels.map((btnLabel) => <Button label={btnLabel.label} cssClass={btnLabel.cssClass}/>);
+const buttons = btnLabels.map((btnLabel) => <Button
+    key={btnLabel.label}
+    label={btnLabel.label}
+    cssClass={btnLabel.cssClass}
+    value={btnLabel.value}/>);
 
 class Calculator extends React.Component {
     renderButton() {
